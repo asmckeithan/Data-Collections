@@ -45,7 +45,7 @@ for (let i = 0; i < csvStr.length; i++) {
     break
   }
 
-  if (cell === 4 && csvStr[i + 1] === '\n' || i + 1 === csvStr.length) {
+  if (cell === 4 && csvStr[i +1 ] === '\n' || i + 1 === csvStr.length) {
     console.log(cell1, cell2, cell3, cell4);
   }
 
@@ -54,17 +54,32 @@ for (let i = 0; i < csvStr.length; i++) {
 
 console.log(`My own Program for String `)
 
-let string = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26"
-let data = ""
-let array = string.split ('\n')
-let placemnt = array.slice(',') 
-console.log( placemnt )
+let string = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor's Assistant,26"
+let array = string.split("\n") 
+console.log(array)
+array.forEach((row) => {
+    console.log([row])
+})
+// Seperated the string by creating using the split method and appling the forEach() method
 
+// Next step is to divide each array down into indvidual elements and create my columns and rows using a loop 
 
-let movies4 = ['Shrek', 'Caddyshack', 'Batman', 'Interstellar', 'Scarface', 'Spaceballs', 'Alien', 'The Count of Monte Cristo'];
+//Part 2
+// create a math problem to count each element in a row to solve for column
 
-console.log(movies4)
+// create a math problem to count the number of array(variable) to calculate the number of rows
 
+// section 2 Part 2
+// use the .flat method to simplify the from 3 dimensional to 2 dimensiona l
+
+//Part 3 
+//create an object where the key is the heading for that column
+// create a loop to show the first element of the array (variable ) is the head of each column. This will require a for each involved in possible loop. 
+
+//Part 4
+//1. use a pop method to remove the last element at 
+//2. unshift method to add at index one 
+//3. push method to add the end of the global scope array
 
 
 
