@@ -71,22 +71,33 @@ for (let i = 1; i < lines.length; i++){
 for (let j = 0;j < rowData.length; j++){
   console.table(`${header[j]}: ${rowData[j]}`);
   arrayobj[i][header[j]] = rowData[j];
+
 }
+
 console.table(arrayobj);
-}
+
+
+
+
 
 
 
 // ^^^^^^created a loop starting with the outer array to create rows , then an inner loop for the nested array . i < lines length = 5 rows , then rowData splits the data to individual elements using the spilt  \. Then variable j is looping for the nested array elements to be assigned to the ordered columns 
-console.log(Part 2)
+console.log(`Part 2`)
+console.log(`Column count ${i}  `)
+
+}
+
 // create a math problem to count each element in a row to solve for column
+let RowCount =  lines.length
+console.log(`Row Count ${RowCount}`) // counts the number of rows
 
 // create a math problem to count the number of array(variable) to calculate the number of rows
 
-// section 2 Part 2
+console.log(`Section 2 Part 2`)
 // use the .flat method to simplify the from 3 dimensional to 2 dimensiona l
 
-//Part 3 
+//Part 3  
 //create an object where the key is the heading for that column
 // create a loop to show the first element of the array (variable ) is the head of each column. This will require a for each involved in possible loop. 
 
