@@ -96,10 +96,25 @@ console.log(`Row Count ${RowCount}`) // counts the number of rows
 
 console.log(`Section 2 Part 2`)
 // use the .flat method to simplify the from 3 dimensional to 2 dimensiona l
-
+console.log(`Flat Method`)
+let flatArray = arrayobj.flat()
+console.log(flatArray)
 //Part 3  
 //create an object where the key is the heading for that column
 // create a loop to show the first element of the array (variable ) is the head of each column. This will require a for each involved in possible loop. 
+let string2 = `Index,Mass (kg),Spring 1 (m),Spring 2 (m)\n1,0.00,0.050,0.050\n2,0.49,0.066,0.066\n3,0.98,0.087,0.080\n4,1.47,0.116,0.108\n5,1.96,0.142,0.138\n6,2.45,0.166,0.158\n7,2.94,0.193,0.174\n8,3.43,0.204,0.192\n9,3.92,0.226,0.205\n10,4.41,0.238,0.232`
+
+let title = string2.split('\n')
+let newObject = [];
+console.log(title)
+// now we have split the string2 into elements in the array. 
+let header2 = title[0].split(',')
+console.table(header2, title)
+// with table view, we can now see how the first index or index 0 is divded up by each individual string or value
+
+
+
+
 
 //Part 4
 //1. use a pop method to remove the last element at 
