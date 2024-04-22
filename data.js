@@ -28,8 +28,8 @@ for (let i = 0; i < csvStr.length; i++) {
     cell3 = "";
     cell4 = "";
     continue
-  }
 
+  }
   switch (cell) {
     case 1:
       cell1 += csvStr[i]
@@ -54,15 +54,29 @@ for (let i = 0; i < csvStr.length; i++) {
 
 console.log(`My own Program for String `)
 
-let string = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor's Assistant,26"
-let array = string.split("\n") 
-console.log(array)
-array.forEach((row) => {
-    console.log([row])
-})
-// Seperated the string by creating using the split method and appling the forEach() method
+let string = `ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor's Assistant,26`
 
-// Next step is to divide each array down into indvidual elements and create my columns and rows using a loop 
+let lines = string.split("\n")
+console.table(lines)
+ let arrayobj = [];
+let header = lines[0].split(',');
+console.table(header)
+
+// Seperated the string by creating using the split method to seperate the header from the body of the table. Singling out the first index 0
+// creating a loop to create columns and rows starting with index 1 or i=1 , i is less than length of lines 
+for (let i = 1; i < lines.length; i++){
+  let rowData = lines[i].split(',');
+  arrayobj[i]= {};
+for (let j = 0;j < rowData.length; j++){
+  console.table(`${header[j]}: ${rowData[j]}`);
+  arrayobj[i][header[j]] = rowData[j];
+}
+console.table(arrayobj);
+}
+
+
+
+// ^^^^^^Next step is to divide each array down into indvidual elements and create my columns and rows using a loop 
 
 //Part 2
 // create a math problem to count each element in a row to solve for column
