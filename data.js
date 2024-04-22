@@ -66,6 +66,7 @@ console.table(header)
 // creating a loop to create columns and rows starting with index 1 or i=1 , i is less than length of lines 
 for (let i = 1; i < lines.length; i++){
   let rowData = lines[i].split(',');
+  console.table(rowData)
   arrayobj[i]= {};
 for (let j = 0;j < rowData.length; j++){
   console.table(`${header[j]}: ${rowData[j]}`);
@@ -76,9 +77,8 @@ console.table(arrayobj);
 
 
 
-// ^^^^^^Next step is to divide each array down into indvidual elements and create my columns and rows using a loop 
-
-//Part 2
+// ^^^^^^created a loop starting with the outer array to create rows , then an inner loop for the nested array . i < lines length = 5 rows , then rowData splits the data to individual elements using the spilt  \. Then variable j is looping for the nested array elements to be assigned to the ordered columns 
+console.log(Part 2)
 // create a math problem to count each element in a row to solve for column
 
 // create a math problem to count the number of array(variable) to calculate the number of rows
